@@ -1,83 +1,327 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-  <title>Hello World!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luca Poggiali - Curriculum</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    :root {
+      --primary: #0f3a7d;
+      --secondary: #e8f1f8;
+      --accent: #ff6b35;
+      --text-dark: #1a1a1a;
+      --text-light: #666;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-      font-size: 36px;
-      margin-top: 100px;
-      margin-bottom: 0;
-    }
-    .container {
-      background-color: #fff;
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    /* Hero: Elegante */
-    .hero {
-      padding: 6rem 1rem;
-      background: linear-gradient(135deg, #f7f7fb 0%, #ffffff 100%);
-      color: #0f1720;
-      text-align: center;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    .hero-container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .hero h1 {
-      font-size: 2.4rem;
-      margin: 0 0 0.5rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-    .hero .subtitle {
-      color: #6b7280;
-      margin: 0 0 1rem;
-      font-size: 1rem;
-    }
-    .hero .lead {
-      font-size: 1.125rem;
-      color: #374151;
-      margin: 0 0 1.6rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: var(--text-dark);
       line-height: 1.6;
     }
-    .hero .btn {
-      display: inline-block;
-      padding: 0.75rem 1.25rem;
-      background: #111827;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
+
+    /* Row personalizzate */
+    .section-row {
+      padding: 80px 0;
+      display: flex;
+      align-items: center;
     }
-    @media (min-width: 768px) {
-      .hero h1 { font-size: 3rem; }
-      .hero .lead { font-size: 1.125rem; }
+
+    .section-row.bg-primary-alt {
+      background: linear-gradient(135deg, var(--primary) 0%, #1a5a9f 100%);
+      color: white;
+    }
+
+    .section-row.bg-secondary-alt {
+      background-color: var(--secondary);
+    }
+
+    .section-row.bg-white {
+      background-color: #fff;
+    }
+
+    .section-row.bg-accent-light {
+      background-color: #fff8f3;
+    }
+
+    /* Hero / Intestazione */
+    .hero-header {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--primary) 0%, #1a5a9f 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero-header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: -1px;
+    }
+
+    .hero-header p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .hero-header .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    /* Placeholder immagini */
+    .img-placeholder {
+      background-color: #e9ecef;
+      border: 2px dashed #adb5bd;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 0.95rem;
+      aspect-ratio: 1;
+    }
+
+    .img-placeholder.landscape {
+      aspect-ratio: 16 / 9;
+    }
+
+    /* Titoli sezioni */
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .section-row.bg-primary-alt .section-title,
+    .section-row.bg-white .section-title {
+      color: var(--primary);
+    }
+
+    .section-row.bg-primary-alt .section-title {
+      color: white;
+    }
+
+    /* Card personalizzate */
+    .cv-card {
+      background: white;
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .cv-card h5 {
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .cv-card .meta {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .cv-card p {
+      margin-bottom: 0;
+      color: var(--text-dark);
+    }
+
+    /* Skill badges */
+    .skill-badge {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .section-row {
+        padding: 50px 0;
+      }
+      .hero-header h1 {
+        font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .img-placeholder {
+        margin-top: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Hero: Benvenuto nel mio angolo creativo (Elegante) -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-container">
-      <h1 id="hero-title">Benvenuto nel mio angolo creativo</h1>
-      <p class="subtitle">Progetti pensati con cura, per comunicare con semplicità.</p>
-      <p class="lead">Scopri un approccio essenziale al design: pulito, misurato e con personalità. Ogni dettaglio racconta una storia.</p>
-      <a class="btn" href="#progetti">Esplora i progetti</a>
+
+  <!-- ROW 1: Hero / Header -->
+  <section class="hero-header">
+    <div class="container">
+      <h1>Luca Poggiali</h1>
+      <p class="subtitle">Studente | Università di San Marino</p>
+      <p>Creativo, curioso e appassionato di design e tecnologia</p>
     </div>
   </section>
-  <p>curriculum</p>
+
+  <!-- ROW 2: About / Chi sono -->
+  <section class="section-row bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="section-title">Chi Sono</h2>
+          <p>Sono uno studente dell'Università di San Marino con una forte passione per il design, la creatività e l'innovazione. Amo affrontare sfide complesse e trasformarle in soluzioni eleganti e funzionali.</p>
+          <p>Il mio percorso è caratterizzato da curiosità costante, voglia di imparare e collaborazione. Credo che il miglior design nasce dall'ascolto attento delle esigenze reali.</p>
+          <p class="text-muted">Sono disponibile per collaborazioni, stage e nuove opportunità di crescita professionale.</p>
+        </div>
+        <div class="col-lg-6">
+          <div class="img-placeholder landscape">
+            [Foto o immagine profilo/hero shot]
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROW 3: Formazione -->
+  <section class="section-row bg-secondary-alt">
+    <div class="container">
+      <h2 class="section-title">Formazione</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="cv-card">
+            <h5>Università di San Marino</h5>
+            <p class="meta">Corso di Laurea | Anno Accademico 2024-2025</p>
+            <p>Studente universitario con focus su design, comunicazione visiva e tecnologie digitali. Sviluppo competenze in progettazione, ricerca utente e problem-solving creativo.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="img-placeholder" style="height: 180px;">
+            [Logo/Immagine Università]
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROW 4: Esperienze e Competenze -->
+  <section class="section-row bg-white">
+    <div class="container">
+      <h2 class="section-title">Competenze Principali</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <h5 style="color: var(--primary); font-weight: 700; margin-bottom: 1rem;">Design</h5>
+          <div class="mb-4">
+            <span class="skill-badge">UI/UX Design</span>
+            <span class="skill-badge">Graphic Design</span>
+            <span class="skill-badge">Web Design</span>
+            <span class="skill-badge">Figma</span>
+            <span class="skill-badge">Adobe Creative Suite</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h5 style="color: var(--primary); font-weight: 700; margin-bottom: 1rem;">Sviluppo</h5>
+          <div class="mb-4">
+            <span class="skill-badge">HTML/CSS</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Bootstrap</span>
+            <span class="skill-badge">Responsive Design</span>
+            <span class="skill-badge">Git</span>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <h5 style="color: var(--primary); font-weight: 700; margin-bottom: 1rem;">Soft Skills</h5>
+          <div>
+            <span class="skill-badge">Comunicazione</span>
+            <span class="skill-badge">Teamwork</span>
+            <span class="skill-badge">Problem Solving</span>
+            <span class="skill-badge">Creatività</span>
+            <span class="skill-badge">Gestione Progetti</span>
+            <span class="skill-badge">Inglese (B2)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROW 5: Progetti Principali -->
+  <section class="section-row bg-accent-light">
+    <div class="container">
+      <h2 class="section-title">Progetti Highlights</h2>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="cv-card">
+            <h5>Progetto 1</h5>
+            <p class="meta">Design | 2024</p>
+            <p>Descrizione breve del primo progetto realizzato. Include dettagli su obiettivi, tecnologie usate e risultati conseguiti.</p>
+          </div>
+          <div class="img-placeholder">
+            [Immagine Progetto 1]
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="cv-card">
+            <h5>Progetto 2</h5>
+            <p class="meta">Web Design | 2024</p>
+            <p>Descrizione breve del secondo progetto. Sottolinea l'approccio metodologico e gli strumenti utilizzati.</p>
+          </div>
+          <div class="img-placeholder">
+            [Immagine Progetto 2]
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="cv-card">
+            <h5>Progetto 3</h5>
+            <p class="meta">UI/UX | 2024</p>
+            <p>Descrizione breve del terzo progetto. Evidenzia l'impatto e gli insegnamenti ricavati dall'esperienza.</p>
+          </div>
+          <div class="img-placeholder">
+            [Immagine Progetto 3]
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROW 6: Contatti / CTA -->
+  <section class="section-row bg-primary-alt">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h2 class="section-title">Pronto a Collaborare</h2>
+          <p style="font-size: 1.1rem; margin-bottom: 2rem;">Se stai cercando un designer/sviluppatore creativo e motivato, sarò felicissimo di parlarti. Contattami per discutere di progetti, opportunità o semplicemente per conoscerci.</p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <a href="mailto:luca.poggiali@example.com" class="btn btn-light btn-lg mb-2" style="width: 100%; margin-bottom: 1rem;">📧 Email</a>
+          <a href="https://linkedin.com/in/lucapoggiali" class="btn btn-outline-light btn-lg" style="width: 100%; margin-bottom: 1rem;" target="_blank">🔗 LinkedIn</a>
+          <a href="https://github.com/lucapoggiali" class="btn btn-outline-light btn-lg" style="width: 100%;" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Luca Poggiali. Curriculum realizzato con Bootstrap 5.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
