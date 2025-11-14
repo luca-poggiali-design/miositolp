@@ -24,13 +24,60 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+    /* Hero: Elegante */
+    .hero {
+      padding: 6rem 1rem;
+      background: linear-gradient(135deg, #f7f7fb 0%, #ffffff 100%);
+      color: #0f1720;
+      text-align: center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    .hero-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .hero .subtitle {
+      color: #6b7280;
+      margin: 0 0 1rem;
+      font-size: 1rem;
+    }
+    .hero .lead {
+      font-size: 1.125rem;
+      color: #374151;
+      margin: 0 0 1.6rem;
+      line-height: 1.6;
+    }
+    .hero .btn {
+      display: inline-block;
+      padding: 0.75rem 1.25rem;
+      background: #111827;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    @media (min-width: 768px) {
+      .hero h1 { font-size: 3rem; }
+      .hero .lead { font-size: 1.125rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Hello World!</h1>
-    <p>This is a simple "Hello World!" page with some CSS styling.</p>
-  </div>
+  <!-- Hero: Benvenuto nel mio angolo creativo (Elegante) -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-container">
+      <h1 id="hero-title">Benvenuto nel mio angolo creativo</h1>
+      <p class="subtitle">Progetti pensati con cura, per comunicare con semplicità.</p>
+      <p class="lead">Scopri un approccio essenziale al design: pulito, misurato e con personalità. Ogni dettaglio racconta una storia.</p>
+      <a class="btn" href="#progetti">Esplora i progetti</a>
+    </div>
+  </section>
   <p>curriculum</p>
 </body>
 </html>
