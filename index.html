@@ -8,10 +8,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
     <title>Luca Poggiali - Portfolio</title>
 </head>
 <body>
+    <!-- Overlay per la tendina contatti -->
+    <div class="contact-overlay"></div>
+    
+    <!-- Tendina contatti -->
+    <div class="contact-dropdown">
+        <button class="btn btn-close-contact" style="margin-bottom: 2rem;">Chiudi</button>
+        <h3 style="margin-bottom: 2rem;">I MIEI CONTATTI</h3>
+        
+        <div style="margin-bottom: 1.5rem;">
+            <h5>Email</h5>
+            <p>luca-poggiali@mock.com</p>
+        </div>
+        
+        <div style="margin-bottom: 1.5rem;">
+            <h5>Telefono</h5>
+            <p>+39 123 456 7890</p>
+        </div>
+        
+        <div style="margin-bottom: 1.5rem;">
+            <h5>Social Media</h5>
+            <p>Instagram: @luca-poggiali</p>
+            <p><a href="https://www.linkedin.com/in/luca-poggiali-b78b4a278">LinkedIn</a></p>
+            <p>Numero di telefono: +39 334 **** ***</p>
+        </div>
+        
+        <div style="margin-bottom: 1.5rem;">
+            <h5>Indirizzo</h5>
+            <p>Rimini, Italia</p>
+        </div>
+    </div>
+
     <!-- Menu Mobile (nascosto di default) -->
     <div class="container-fluid">
         <div class="mobile-nav-wrapper d-lg-none">
@@ -19,16 +49,16 @@
                 <button class="btn btn-close">Close</button> 
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="nav-link selected"><strong>PROGETTI</strong></a>
+                        <a href="#progetti" class="nav-link selected"><strong>PROGETTI</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><strong>ALTRO</strong></a>
+                        <a href="#altro" class="nav-link"><strong>ALTRO</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><strong>SU DI ME</strong></a>
+                        <a href="#su-di-me" class="nav-link"><strong>SU DI ME</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><strong>CONTATTI</strong></a>
+                        <a href="#" class="nav-link contact-link"><strong>CONTATTI</strong></a>
                     </li>
                 </ul> 
             </div>
@@ -38,40 +68,40 @@
     <!-- Contenuto principale -->
     <div class="container-fluid">
         <!-- Header con navigazione -->
-        <div class="row negative d-flex justify-content-end py-sm-5">
+        <div class="row negative d-flex justify-content-end py-lg-5">
             <!-- Menu Desktop (visibile solo su schermi grandi) -->
             <div class="col-lg-6 justify-content-end info negative nav-wrapper d-none d-lg-block">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><strong>PROGETTI</strong></a>
+                        <a href="#progetti" class="nav-link"><strong>PROGETTI</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><strong>ALTRO</strong></a>
+                        <a href="#altro" class="nav-link"><strong>ALTRO</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><strong>SU DI ME</strong></a>
+                        <a href="#su-di-me" class="nav-link"><strong>SU DI ME</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><strong>CONTATTI</strong></a>
+                        <a href="#" class="nav-link contact-link"><strong>CONTATTI</strong></a>
                     </li>
                 </ul>
             </div>
             
             <!-- Bottone Menu Mobile (visibile solo su schermi piccoli) -->
-            <div class="d-sm-none d-block col-1 d-flex justify-content-end py-4">
+            <div class="d-lg-none d-block col-4 d-flex justify-content-end py-4">
                 <button class="btn btn-menu">Menu</button>
             </div>
         </div>
         
         <!-- Separatore -->
         <div class="row">
-            <div class="py-1 py-sm-2 positive col-12"></div>
+            <div class="positive col-12" style="height: 1px;"></div>
         </div>
         
         <!-- Hero section con immagine e testo -->
-        <div class="row negative d-flex align-items-center">
-            <img src="Imgs/Rectangle 13.png" alt="Poggiali Luca's portrait" class="portrait-img col-12 col-sm-4 py-3 py-sm-5 order-1 order-sm-0">
-            <div class="col-sm-4 col-12 offset-sm-1 order-0 order-sm-1 py-3">
+        <div class="row negative d-flex align-items-center" style="height: 84vh;">
+            <img src="Imgs/Rectangle 13.png" alt="Poggiali Luca's portrait" class="portrait-img col-12 col-lg-4 py-3 py-lg-5 order-1 order-lg-0">
+            <div class="col-lg-4 col-12 offset-lg-1 order-0 order-lg-1 py-3">
                 <h2 class="py-2"> 
                     Heylà! Mi presento, sono
                 </h2>
@@ -80,115 +110,115 @@
                 </h1>
             </div>
         </div>
-        <div class="row positive align-items-center big">
-            <div class="col-12 col-sm-4 offset-sm-1">
-                Nato nel 2003 e cresciuto nel cuore della città di Rimini, ho intrapreso studi di meccanica alle superiori ITTS Rimini. La formazione tecnica mi ha fornito un metodo di studio, abilità nel disegno tecnico e familiarità con programmi vettoriali e acume in problem solving. In seguito, decisi di intraprendere una nuova strada: La strada del Design, all’Università degli Studi della Repubblica di San Marino.
+        <div class="row positive align-items-center big" id="su-di-me">
+            <div class="col-12 col-lg-4 offset-lg-1">
+                Nato nel 2003 e cresciuto nel cuore della città di Rimini, ho intrapreso studi di meccanica alle superiori ITTS Rimini. La formazione tecnica mi ha fornito un metodo di studio, abilità nel disegno tecnico e familiarità con programmi vettoriali e acume in problem solving. In seguito, decisi di intraprendere una nuova strada: La strada del Design, all'Università degli Studi della Repubblica di San Marino.
             </div>
-            <div class="d-none d-sm-block col-sm-6 offset-sm-1">
+            <div class="d-none d-lg-block col-lg-6 offset-lg-1">
                 <img src="Imgs/Rectangle 1.jpg" alt="arco d'augusto" class="img-fluid w-100" style="object-fit: cover; display: block;">
             </div>
         </div>
     </div>
-    <div class="d-sm-none d-block col-12">
+    <div class="d-lg-none d-block col-12">
         <img src="Imgs/Rectangle 1.jpg" alt="arco d'augusto" class="monument-img img-fluid">
         <h3 class="negative py-5"> Cosa mi rappresenta</h3>
     </div>
      <div class="container-fluid">
-        <div class="row negative py-sm-5">
-                <div class="col-12 col-sm-4">
+        <div class="row negative py-lg-5" id="altro">
+                <div class="col-12 col-lg-4">
                     <img src="Imgs/spiaggia.jpg" alt="immagine-blocco spiaggia di Rimini" style="margin: 0; width: 100%;" class="py-4">
                     <h4>Il mio paesaggio visivo</h4>
                     <p>Il paesaggio che trovo più vicino a me è il mare. Non per il divertimento, o per la festa, ma per il senso di pace che mi infonde, per il suono delle onde: Un posto, neella mia mente, pacifico.
                     </p>
                 </div>
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-lg-4">
                     <img src="Imgs/palacongressi.jpg" alt="immagine-blocco Palacongressi" style="margin: 0; width: 100%;" class="py-4">
                     <h4>Architetture che mi parlano</h4>
                     <p>Vivendo nel cuore di Rimini, ho sempre trovato il Palacongressi come una struttura aliena, ma affascinante. Nonostante le sue peculiarità non risulta cacofonica, e vive in simbiosi con i dintorni.
                     </p>
                 </div>
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-lg-4">
                     <img src="Imgs/videogiochi.jpg" alt="immagine-blocco videogiochi" style="margin: 0; width: 100%;" class="py-4">
                     <h4>I miei Hobby</h4>
                     <p>Da sempre sono appassionato di videogiochi, uno dei medium più incompresi. Possono infatti essere, al di là di semplici passatempo, dei mezzi di comunicazione complessi, intricati e immersivi.
                     </p>
                 </div>
             </div>
-        <div class="row positive py-sm-5">
-            <div class="d-block d-sm-none col-12 py-3 d-block d-sm-none">
+        <div class="row positive py-lg-5" id="progetti">
+            <div class="d-block d-lg-none col-12 py-3 d-block d-lg-none">
                 <h3>I MIEI LAVORI</h3>
             </div>
         </div>
-    <div class="row py-sm-5 positive">
-        <div class="col-12 col-sm-6"> 
+    <div class="row py-lg-5 positive">
+        <div class="col-12 col-lg-6"> 
             <div class="row g-0">
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-lg-6">
                 <img src="Imgs/img-poster-1.jpg" class="img-fluid w-100" style="object-fit: cover; display: block;">
                 </div>
-                <div class="col-12 col-sm-6 d-none d-sm-block">
+                <div class="col-12 col-lg-6 d-none d-lg-block">
                 <img src="Imgs/img-poster-2.jpg" class="img-fluid w-100" style="object-fit: cover; display: block;">
                 </div> 
             </div>
         </div>
-        <div class="col-sm-4 offset-sm-2 col-12">
+        <div class="col-lg-4 offset-lg-2 col-12">
             <h5 class="pdng-top">Posters</h5>
-            <p class="esp">Tra i miei lavori personali vi sono anche poster, coi quali cerco di trasmettere emozioni e stimolare curiosità.
+            <p class="esp">Tra i miei lavori personali vi sono anche poster, coi quali cerco di tralgettere emozioni e stimolare curiosità.
             </p>
         </div>
      </div>
         <div class="row">
-            <div class="py-1 py-sm-2 negative col-12"></div>
+            <div class="negative col-12" style="height: 1px;"></div>
         </div>
-     <div class="row py-sm-5 positive">
-        <div class="col-12 col-sm-6 order-0 order-sm-1 offset-sm-2"> 
+     <div class="row py-lg-5 positive">
+        <div class="col-12 col-lg-6 order-0 order-lg-1 offset-lg-2"> 
             <div class="row g-0">
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-lg-6">
                 <img src="Imgs/img-natura-1.jpg" class="img-fluid w-100" style="object-fit: cover; display: block;">
                 </div>
-                <div class="col-12 col-sm-6 d-none d-sm-block d-none d-sm-block">
+                <div class="col-12 col-lg-6 d-none d-lg-block d-none d-lg-block">
                 <img src="Imgs/img-natura-2.jpg" class="img-fluid w-100" style="object-fit: cover; display: block;">
                 </div> 
             </div>
         </div>
-        <div class="col-sm-4 col-12 order-1 order-sm-0">
+        <div class="col-lg-4 col-12 order-1 order-lg-0">
             <h5 class="pdng-top">Tra cielo e terra: Natura</h5>
             <p class="esp">Una raccolta di foto di cielo e natura manipolate in maniera imprevedibile, dando vita a una rappresentazione di territori fantastici, mappe territoriali immaginarie piene di colori, utilizzati consuetamente in mappe e foto geografiche.
             </p>
         </div>
      </div>
         <div class="row">
-            <div class="py-1 py-sm-2 negative col-12"></div>
+            <div class="negative col-12" style="height: 1px;"></div>
         </div>
-     <div class="row py-sm-5 positive">
-        <div class="col-12 col-sm-6 order-1 order-sm-0"> 
+     <div class="row py-lg-5 positive">
+        <div class="col-12 col-lg-6 order-1 order-lg-0"> 
             <div class="row g-0">
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-lg-6">
                 <img src="Imgs/KING_CRIMSON_POSTERS_2p.jpg" class="img-fluid w-100" style="object-fit: cover; display: block;">
                 </div>
-                <div class="col-12 col-sm-6 d-none d-sm-block d-none d-sm-block">
+                <div class="col-12 col-lg-6 d-none d-lg-block d-none d-lg-block">
                 <img src="Imgs/KING_CRIMSON_POSTERS_3p.jpg" class="img-fluid w-100" style="object-fit: cover; display: block;">
                 </div> 
             </div>
         </div>
-        <div class="col-sm-4 col-12 order-0 order-sm-1 offset-sm-2">
+        <div class="col-lg-4 col-12 order-0 order-lg-1 offset-lg-2">
             <h5 class="pdng-top">Cinehub Astoria</h5>
             <p class="esp">Una raccolta di foto di cielo e natura manipolate in maniera imprevedibile, dando vita a una rappresentazione di territori fantastici, mappe territoriali immaginarie piene di colori, utilizzati consuetamente in mappe e foto geografiche.
             </p>
         </div>
      </div>
      <div class="row copyright-section negative">
-        <div class="py-1 py-sm-2 negative col-12 col-sm-2 offset-sm-1">
+        <div class="py-1 py-lg-2 negative col-12 col-lg-2 offset-lg-1">
             © 2024
         <br>
             Privacy — Cookies
         </div>
-        <div class="py-1 py-5 negative col-12 col-sm-6 offset-sm-3 d-flex justify-content-end">
+        <div class="py-1 py-5 negative col-12 col-lg-6 offset-lg-3 d-flex justify-content-end">
             <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><strong>I MIEI CONTATTI</strong></a>
+                        <a href="#" class="nav-link contact-link"><strong>I MIEI CONTATTI</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"><strong>ALTRO</strong></a>
+                        <a href="#altro" class="nav-link"><strong>ALTRO</strong></a>
                     </li>
             </ul>
         </div> 
@@ -203,6 +233,12 @@
         const mobileNavWrapper = document.querySelector('.mobile-nav-wrapper');
         const navLinks = document.querySelectorAll('.mobile-nav-wrapper .nav-link');
         
+        // Elementi per la tendina contatti
+        const contactLinks = document.querySelectorAll('.contact-link');
+        const contactDropdown = document.querySelector('.contact-dropdown');
+        const contactOverlay = document.querySelector('.contact-overlay');
+        const btnCloseContact = document.querySelector('.btn-close-contact');
+        
         // Apre il menu mobile
         if (btnMenu) {
             btnMenu.addEventListener('click', function() {
@@ -216,6 +252,13 @@
                 mobileNavWrapper.classList.remove('show');
             });
         }
+        
+        // Chiude il menu mobile cliccando sui link
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                mobileNavWrapper.classList.remove('show');
+            });
+        });
         
         // Chiude il menu mobile cliccando sullo sfondo (ma non sui link)
         if (mobileNavWrapper) {
@@ -232,6 +275,33 @@
                 if (!isLink) {
                     mobileNavWrapper.classList.remove('show');
                 }
+            });
+        }
+        
+        // Apre la tendina contatti
+        contactLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                contactDropdown.classList.add('show');
+                contactOverlay.classList.add('show');
+                // Chiudi il menu mobile se è aperto
+                mobileNavWrapper.classList.remove('show');
+            });
+        });
+        
+        // Chiude la tendina contatti con il bottone
+        if (btnCloseContact) {
+            btnCloseContact.addEventListener('click', function() {
+                contactDropdown.classList.remove('show');
+                contactOverlay.classList.remove('show');
+            });
+        }
+        
+        // Chiude la tendina contatti cliccando sull'overlay
+        if (contactOverlay) {
+            contactOverlay.addEventListener('click', function() {
+                contactDropdown.classList.remove('show');
+                contactOverlay.classList.remove('show');
             });
         }
     });
