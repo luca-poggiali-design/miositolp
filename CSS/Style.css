@@ -212,15 +212,13 @@ body {
 
 /* Bottone Menu */
 .btn-menu {
-    background: transparent url('../Imgs/vector.svg') no-repeat center center;
+    background: transparent url('../Imgs/hamburger.svg') no-repeat center center;
     background-size: contain;
     border: none;
-    padding: 0;
     width: 24px;
     height: 24px;
     cursor: pointer;
     font-size: 0;
-    margin: 0 !important;
     transition: opacity 0.2s ease;
 }
 
